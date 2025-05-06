@@ -14,3 +14,5 @@ function changeTheme() {
 }
 
 themeSelect.addEventListener('change', changeTheme);
+
+changeTheme();
