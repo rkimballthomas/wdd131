@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: white; 
+  color: #222;              
+  padding: 1rem;
+}
+
+header {
+  background-color: white; 
+  color: #4b8bbe;          
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #4b8bbe; 
+}
+
+header p {
+  display: none;
+}
+
+nav {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-top: 2px solid #4b8bbe;
+  border-bottom: 2px solid #4b8bbe;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end; 
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #4b8bbe;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.filters {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #4b8bbe;
+  margin-bottom: 1rem;
+  box-shadow: none;
+}
+
+.filters h2 {
+  margin-bottom: 1rem;
+  color: #4b8bbe;
+}
+
+article {
+  margin-bottom: 1.5rem;
+}
+
+.review {
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.review-meta {
+  width: 80px;
+  font-size: 0.9rem;
+  color: #333;
+  text-align: left;
+  line-height: 1.4;
+  flex-shrink: 0;
+  padding-right: 1rem;
+  border-right: 4px solid #4b8bbe; 
+}
+
+.review-meta p {
+  margin-bottom: 0.5rem;
+}
+
+.review-content {
+  flex-grow: 1;
+  color: #222;
+}
+
+.review-content h3 {
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.review-content a {
+  color: #4b8bbe;
+  text-decoration: none;
+}
+
+.review-content a:hover {
+  text-decoration: underline;
+}
+
+.review-content img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin: 0.5rem 0;
+  background: white;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+  color: #4b8bbe;
+  border-radius: 8px;
+  border-top: 2px solid #4b8bbe;
+}
+
+@media (max-width: 600px) {
+  .review {
+    flex-direction: column;
+  }
+
+  .review-meta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    border-right: none; 
+    padding-right: 0;
+    border-bottom: 3px solid #4b8bbe; 
+  }
+
+  .review-meta p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filters {
+    order: -1; 
+    margin-bottom: 1rem;
+  }
+}
