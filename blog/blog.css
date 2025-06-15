@@ -1,3 +1,4 @@
+/* RESET AND BASE STYLING */
 * {
   margin: 0;
   padding: 0;
@@ -7,23 +8,25 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: white; 
-  color: #222;              
+  background-color: white;
+  color: #222;
   padding: 1rem;
 }
 
+/* HEADER */
 header {
-  background-color: white; 
-  color: #4b8bbe;          
+  background-color: white;
+  color: #4b8bbe;
   padding: 1rem;
   text-align: center;
-  border-bottom: 2px solid #4b8bbe; 
+  border-bottom: 2px solid #4b8bbe;
 }
 
 header p {
   display: none;
 }
 
+/* NAVIGATION */
 nav {
   background-color: white;
   padding: 0.5rem 1rem;
@@ -36,9 +39,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 1rem;
-  justify-content: flex-end; 
-  margin: 0;
-  padding: 0;
+  justify-content: flex-end;
 }
 
 nav a {
@@ -51,7 +52,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-
+/* MAIN LAYOUT */
 main {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -59,13 +60,13 @@ main {
   margin-top: 2rem;
 }
 
+/* FILTERS SIDEBAR */
 .filters {
   background-color: white;
   padding: 1rem;
   border-radius: 8px;
   border: 2px solid #4b8bbe;
   margin-bottom: 1rem;
-  box-shadow: none;
 }
 
 .filters h2 {
@@ -73,6 +74,38 @@ main {
   color: #4b8bbe;
 }
 
+/* Filter Form */
+.filters form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filters label {
+  font-weight: bold;
+  color: #222;
+}
+
+.filters select,
+.filters button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filters button {
+  background-color: #4b8bbe;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filters button:hover {
+  background-color: #357ca5;
+}
+
+/* REVIEW ARTICLES */
 article {
   margin-bottom: 1.5rem;
 }
@@ -85,6 +118,7 @@ article {
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
 }
 
 .review-meta {
@@ -95,7 +129,7 @@ article {
   line-height: 1.4;
   flex-shrink: 0;
   padding-right: 1rem;
-  border-right: 4px solid #4b8bbe; 
+  border-right: 4px solid #4b8bbe;
 }
 
 .review-meta p {
@@ -131,6 +165,7 @@ article {
   background: white;
 }
 
+/* FOOTER */
 footer {
   margin-top: 2rem;
   padding: 1rem;
@@ -139,6 +174,19 @@ footer {
   color: #4b8bbe;
   border-radius: 8px;
   border-top: 2px solid #4b8bbe;
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filters {
+    order: -1;
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -152,24 +200,12 @@ footer {
     justify-content: space-between;
     text-align: center;
     margin-bottom: 0.5rem;
-    border-right: none; 
+    border-right: none;
     padding-right: 0;
-    border-bottom: 3px solid #4b8bbe; 
+    border-bottom: 3px solid #4b8bbe;
   }
 
   .review-meta p {
     margin: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .filters {
-    order: -1; 
-    margin-bottom: 1rem;
   }
 }

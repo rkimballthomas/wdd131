@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Credit Card Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+</head>
+<body>
+  <div id="form-container">
+    <div id="shadow"></div>
+
+    <div id="card-back">
+      <div id="card-stripe"></div>
+      <form>
+        <div id="cvc-container">
+          <label for="card-cvc">CVC</label>
+          <input id="card-cvc" name="card-cvc" type="text" placeholder="123" />
+          <p>Last 3 digits on back</p>
+        </div>
+      </form>
+    </div>
+
+    <div id="card-front">
+      <form>
+        <div id="image-container">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa logo" />
+        </div>
+
+        <label for="card-number">Card Number</label>
+        <input id="card-number" name="card-number" type="text" placeholder="1234 5678 9012 3456" />
+
+        <div id="cardholder-container">
+          <label for="card-holder">Cardholder Name</label>
+          <input id="card-holder" name="card-holder" type="text" placeholder="Jane Doe" />
+        </div>
+
+        <div id="exp-container">
+          <label for="card-month">Expiration</label>
+          <input id="card-month" name="card-month" type="text" placeholder="MM" />
+          <input id="card-year" name="card-year" type="text" placeholder="YY" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="card-form">
+    <button id="card-btn">Submit</button>
+  </div>
+</body>
+</html>
